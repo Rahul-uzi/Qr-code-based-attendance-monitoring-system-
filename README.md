@@ -109,7 +109,6 @@ Make sure the following settings in `app.py` are updated correctly:
 ---
 
 ## 🖼️ Screenshots
-![1d5870e5-9c23-49cc-8be2-f9c0d7045023](https://github.com/user-attachments/assets/7f4f50fa-ec4a-48d9-820d-ec962784cd84)
 ![1d5870e5-9c23-49cc-8be2-f9c0d7045023](https://github.com/user-attachments/assets/2e68929d-dd66-4732-b114-88d2a8d64d53)
 ![b89021a7-f08d-47d7-aa4b-d044ad217f4f](https://github.com/user-attachments/assets/820d70a5-7d6d-4148-af46-9bed08352a60)
 ![283f3f94-d709-4b9a-baa4-1ade835f6667](https://github.com/user-attachments/assets/a7afc91e-1af9-440d-a034-f8642f97a654)
@@ -118,6 +117,14 @@ Make sure the following settings in `app.py` are updated correctly:
 ![4b7423e4-ba85-4276-aa53-f47cc7507c5d](https://github.com/user-attachments/assets/792cfd7e-dfb9-4581-a37e-53e64f6df5df)
 ![3ab1c43f-378f-42b7-b326-dd2c62207ea1](https://github.com/user-attachments/assets/3313953c-fe6b-4baa-9176-809c5dae3764)
 ![1eab76fb-447f-4bc0-bc04-45e4b1239d60](https://github.com/user-attachments/assets/43a8625d-82ea-4a76-92a7-c2453f9980d6)
+![image](https://github.com/user-attachments/assets/7fa888fc-68e6-42aa-82fa-01b57d735f0c)
+![image](https://github.com/user-attachments/assets/bca428f6-b6e1-4a34-a49a-cc7dd110a3a7)
+![image](https://github.com/user-attachments/assets/2032b335-1908-49b1-acb8-31febb195091)
+![image](https://github.com/user-attachments/assets/83a81a75-a215-4679-bfe7-300ac4bc0f7d)
+
+
+
+
 
 
 ### 📋 Main Page
