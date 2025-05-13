@@ -89,16 +89,16 @@ Make sure the following settings in `app.py` are updated correctly:
 
 # C M D commands required to run these files are
 For running Attendance files - 
-*1. pip install flask
-*2. pip install -r requirements.txt
-*3. pip install pandas
-*4. pip install reportlab
-*5. pip install mysql-connector-python
-*6. flask run
+*  1. pip install flask
+*  2. pip install -r requirements.txt
+*  3. pip install pandas
+*  4. pip install reportlab
+*  5. pip install mysql-connector-python
+*  6. flask run
  For running QR-code portal -
- *1. pip install flask
- *2. pip install -r requirements.txt
- *3. python manage.py runserver 0.0.0.0:8000
+ * 1. pip install flask
+ * 2. pip install -r requirements.txt
+ * 3. python manage.py runserver 0.0.0.0:8000
 
 
 ### Admin Functions
