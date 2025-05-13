@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        body {
+            background: url("{{ url_for('static', filename='bg.png') }}") no-repeat center center fixed;
+            background-size: cover;
+        }
+        .col-lg-4{
+          background: rgba(0,0,0,0.6);
+          margin-top:125px ; 
+          padding-top:1em;
+          padding-bottom:3em;
+          color:#fff;
+          border-radius:10px;
+          -webkit-box-shadow: 2px 2px 15px 0px rgba(0, 3, 0, 0.7);
+          -moz-box-shadow: 2px 2px 15px 0px rgba(0, 3, 0, 0.7);
+          box-shadow: 2px 2px 15px 0px rgba(0, 3, 0, 0.7); 
+          margin-left:auto; margin-right: auto; 
+        }
+        .col-lg-12{
+          background: rgba(0,0,0,0.6);
+          max-height: 20px ;
+           padding-top:1em;
+           padding-bottom:3em;color:#fff;
+           border-radius:10px;
+           -webkit-box-shadow: 2px 2px 15px 0px rgba(0, 3, 0, 0.7);
+            -moz-box-shadow: 2px 2px 15px 0px rgba(0, 3, 0, 0.7);
+            box-shadow: 2px 2px 15px 0px rgba(0, 3, 0, 0.7);
+             margin-left:auto; 
+             margin-right: auto;
+        }
+       
+        .radio-group {
+          margin-top: 10px;
+          padding: 10px;
+        }
+    
+        .radio-group label {
+          margin-right: 10px;
+        }
+
+        .btn {
+          margin-top:20px;
+          margin-bottom:-40px;
+          display: inline-block;
+          font-weight: 400;
+          margin-left: 40%;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: middle;
+        }
+
+        /* New animation styles */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .shake {
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(0); }
+            25% { transform: translate(-5px); }
+            50% { transform: translate(5px); }
+            75% { transform: translate(-5px); }
+            100% { transform: translate(0); }
+        }
+
+        /* New button hover effect */
+        .btn:hover {
+            background-color: rgba(0, 123, 255, 0.7);
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="fade-in">
+    <div class="col-lg-12">
+        <a href="{{ url_for('index') }}">
+            <h5 class="text-left"> Home</h5>
+        </a>
+    </div>
+
+    <div class="col-lg-4">
+        <form method="POST" action="{{ url_for('login') }}" id="loginForm">
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4"> Log In </legend>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="role" value="teacher" required>
+                Teacher
+              </label>
+              <label>
+                <input type="radio" name="role" value="admin" required>
+                Admin
+              </label>
+            </div>
+      
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Login!</button>
+            </div>
+        </form>
+        {% if error %}
+        <div class="alert alert-danger shake" role="alert">
+            {{ error }}
+        </div>
+        {% endif %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        // Dynamic background change
+        const backgrounds = [
+            "{{ url_for('static', filename='bg.png') }}",
+            "{{ url_for('static', filename='bg.png') }}"
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            document.body.style.backgroundImage = `url(${backgrounds[currentIndex]})`;
+            currentIndex = (currentIndex + 1) % backgrounds.length;
+        }
+
+        // Change background every 10 seconds
+        setInterval(changeBackground, 10000);
+
+        // Add a simple animation on page load
+        window.onload = function() {
+            document.getElementById('loginForm').classList.add('fade-in');
+            changeBackground(); // Set initial background
+        };
+    </script>
+</body>
+</html>

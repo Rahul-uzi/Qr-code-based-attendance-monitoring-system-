@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Attendance Portal</title>
+    <link rel="stylesheet" href="{% static 'StudentView/Index_Style.css' %}" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        animation: fadeIn 1s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .student:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      .submit-button {
+        transition: transform 0.2s;
+      }
+      .submit-button:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">Apna College</h1>
+      <h2>Attendance Portal</h2>
+    </header>
+
+    <div class="container">
+      <section class="attendance-section">
+        <h2 class="section-title">Select Your Name</h2>
+        <form
+          class="attendance-form"
+          method="POST"
+          action="{% url 'add_manually_post' %}"
+          id="attendanceForm"
+        >
+          {% csrf_token %}
+          <ul class="student-list">
+            {% for student in students %}
+            <li class="student">
+              <label class="student-label">
+                <span>
+                  {{student.s_roll}} - {{ student.s_fname }} {{student.s_lname}}
+                </span>
+                <span class="checkmark"></span>
+                <input
+                  type="checkbox"
+                  class="student-checkbox"
+                  name="student-name"
+                  value="{{student.s_roll}}"
+                />
+              </label>
+            </li>
+            {% endfor %}
+          </ul>
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; QR Attendance System 2025 - Team Project Phoenix</p>
+    </footer>
+
+    <script>
+      $(document).ready(function() {
+        // Highlight selected student
+        $(".student").click(function() {
+          $(".student-checkbox").prop("checked", false);
+          $(this).find(".student-checkbox").prop("checked", true);
+          $(".student").removeClass("selected");
+          $(this).addClass("selected");
+        });
+      
+        $("#attendanceForm").submit(function(e) {
+          e.preventDefault();
+          let checked = $(".student-checkbox:checked").length;
+          if (checked > 0) {
+            Swal.fire({
+              title: "Success!",
+              text: "Your attendance has been marked!",
+              icon: "success",
+              confirmButtonText: "OK"
+            }).then(() => {
+              this.submit();
+            });
+          } else {
+            Swal.fire({
+              title: "Oops!",
+              text: "Please select a student before submitting.",
+              icon: "warning",
+              confirmButtonText: "OK"
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

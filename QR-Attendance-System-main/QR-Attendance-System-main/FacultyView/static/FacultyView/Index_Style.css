@@ -1,0 +1,196 @@
+/* Define CSS variables for colors and transitions */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #3b82f6;
+  --background-color: #f8fafc;
+  --text-color: #1e293b;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 0.5s ease-out;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Main content layout */
+main {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  min-height: calc(100vh - 180px);
+}
+
+/* Card styles */
+.marked-list, .attendance-container {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 500px;
+  transition: var(--transition);
+}
+
+.marked-list:hover, .attendance-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Student list styles */
+.student-list {
+  margin: 1.5rem 0;
+}
+
+.student {
+  margin: 0.75rem 0;
+  transition: var(--transition);
+}
+
+.student-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.student-label:hover {
+  background: #f1f5f9;
+  transform: translateX(5px);
+}
+
+/* Button styles */
+button {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.delete-button {
+  background: transparent;
+  color: #ef4444;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.delete-button:hover {
+  color: #dc2626;
+  background: #fee2e2;
+  transform: scale(1.1);
+}
+
+/* QR Code container */
+.attendance-card {
+  text-align: center;
+}
+
+.attendance-card img {
+  border-radius: 1rem;
+  margin: 2rem auto;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.attendance-card img:hover {
+  transform: scale(1.02);
+}
+
+/* Footer styles */
+footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .marked-list, .attendance-container {
+    max-width: 100%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h2 {
+    font-size: 1.25rem;
+  }
+}
