@@ -1,7 +1,3 @@
-Here is the final, polished **README.md** file for your **QR Attendance Monitoring System**, including the screenshots you just shared:
-
----
-
 <div align="center">  
 
 # 🔥 QR Attendance Monitoring System 🔥
