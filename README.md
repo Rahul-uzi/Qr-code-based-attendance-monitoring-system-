@@ -88,15 +88,15 @@ Make sure the following settings in `app.py` are updated correctly:
 ---
 
 # C M D commands required to run these files are
-* For running Attendance files - 1. pip install flask
-                                 2. pip install -r requirements.txt
-                                 3. pip install pandas
-                                 4. pip install reportlab
-                                 5. pip install mysql-connector-python
-                                 6. flask run
-* For running QR-code portal - 1. pip install flask
-                               2. pip install -r requirements.txt
-                               3. python manage.py runserver 0.0.0.0:8000
+For running Attendance files - *1. pip install flask
+                                 *2. pip install -r requirements.txt
+                                *3. pip install pandas
+                                 *4. pip install reportlab
+                                *5. pip install mysql-connector-python
+                                 *6. flask run
+ For running QR-code portal - *1. pip install flask
+                               *2. pip install -r requirements.txt
+                               *3. python manage.py runserver 0.0.0.0:8000
 
 
 ### Admin Functions
@@ -160,8 +160,7 @@ Make sure the following settings in `app.py` are updated correctly:
 
 
 ### 👩‍🎓 Student Registration
-
-![Student Registration](./b89021a7-f08d-47d7-aa4b-d044ad217f4f.png)
+![49c8bcaa-c729-4bcb-8d6b-5062aff6602e](https://github.com/user-attachments/assets/177d145f-6e30-431c-9e8f-53e7406348f1)
 
 ### 🔄 Student Form
 
@@ -195,9 +194,3 @@ Rahul Dhiman
 ##License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
-
----
-# Other Detail
-Go to ever file in this repo of these two files and use readme from there to run  each files properly and make sure that once pip commands are used then no need to write them ever time , only use for the first time only and flask to run these files,and after making changes stop the server and run again to see the changes made.
----
-Would you like me to include a short video demo section to showcase the flow, like logging in, registering, and generating reports? It could make the README even more engaging. Just let me know if you want me to tweak anything else! 😊
