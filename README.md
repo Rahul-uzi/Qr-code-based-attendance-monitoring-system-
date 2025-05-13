@@ -8,23 +8,23 @@ Effortlessly manage attendance with QR codes and real-time monitoring – perfec
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 The **QR Attendance Monitoring System** is a cutting-edge application that merges QR-based attendance tracking with robust backend monitoring. Built on Django, Flask, and MySQL, it provides a seamless, secure, and highly scalable solution for organizations, schools, and businesses that require efficient attendance management.
 
 ---
 
-## 📝 Key Features
+##  Key Features
 
-* **📱 Automatic IP Detection:** Generates unique QR codes based on device IP for fast local network connections.
-* **🔐 Secure Authentication:** Protects access with role-based authentication for admins, teachers, and students.
-* **📊 Real-Time Attendance:** Tracks attendance with live updates, eliminating the need for manual record-keeping.
-* **📅 Advanced Reporting:** Generate detailed reports with trends, summaries, and analytics for better insights.
-* **📂 Data Management:** Efficiently stores, searches, and filters attendance data for quick access.
-* **📬 Automated Notifications:** Sends alerts for absentees and upcoming classes or meetings.
-* **⚙️ Integration Ready:** Easily connects with existing systems for seamless data management.
-* **🎯 Scalable Design:** Handles large numbers of users and attendance records without compromising performance.
-* **🖥️ User-Friendly Interface:** Simple, intuitive design for smooth user experience.
+* **Automatic IP Detection:** Generates unique QR codes based on device IP for fast local network connections.
+* **Secure Authentication:** Protects access with role-based authentication for admins, teachers, and students.
+* **Real-Time Attendance:** Tracks attendance with live updates, eliminating the need for manual record-keeping.
+* **Advanced Reporting:** Generate detailed reports with trends, summaries, and analytics for better insights.
+* **Data Management:** Efficiently stores, searches, and filters attendance data for quick access.
+* **Automated Notifications:** Sends alerts for absentees and upcoming classes or meetings.
+* **Integration Ready:** Easily connects with existing systems for seamless data management.
+* **Scalable Design:** Handles large numbers of users and attendance records without compromising performance.
+* **User-Friendly Interface:** Simple, intuitive design for smooth user experience.
 
 ---
 
@@ -75,7 +75,7 @@ Make sure the following are installed before starting:
 
 ---
 
-## 🗄️ Database Configuration
+## Database Configuration
 
 Make sure the following settings in `app.py` are updated correctly:
 
@@ -87,7 +87,17 @@ Make sure the following settings in `app.py` are updated correctly:
 
 ---
 
-## 🎯 Working
+# C M D commands required to run these files are
+* For running Attendance files - 1. pip install flask
+                                 2. pip install -r requirements.txt
+                                 3. pip install pandas
+                                 4. pip install reportlab
+                                 5. pip install mysql-connector-python
+                                 6. flask run
+* For running QR-code portal - 1. pip install flask
+                               2. pip install -r requirements.txt
+                               3. python manage.py runserver 0.0.0.0:8000
+
 
 ### Admin Functions
 
@@ -129,19 +139,25 @@ Make sure the following settings in `app.py` are updated correctly:
 
 ### 📋 Main Page
 
-![Main Page](./49c8bcaa-c729-4bcb-8d6b-5062aff6602e.png)
+![image](https://github.com/user-attachments/assets/6b7c1009-0a54-4ef0-87e6-79158ae2d50a)
+![image](https://github.com/user-attachments/assets/62c4919c-cca5-4abc-8eae-a1e5d6752606)
+![image](https://github.com/user-attachments/assets/f904ea81-d033-4723-bc94-89a2a2cc82e6)
+
 
 ### 🔑 Login Page
 
-![Login Page](./1eab76fb-447f-4bc0-bc04-45e4b1239d60.png)
+![image](https://github.com/user-attachments/assets/b2c6c547-c051-49cc-9e4a-426786de8607)
+
 
 ### 📊 Admin Dashboard
 
-![Admin Dashboard](./1d5870e5-9c23-49cc-8be2-f9c0d7045023.png)
+![image](https://github.com/user-attachments/assets/3dbf6ea6-1b64-47de-ae5c-ecceb86e9e5d)
+
 
 ### 👨‍🏫 Teacher Registration
 
-![Teacher Registration](./3ab1c43f-378f-42b7-b326-dd2c62207ea1.png)
+![image](https://github.com/user-attachments/assets/823e64a6-a84c-47bb-9b38-3600d8159589)
+
 
 ### 👩‍🎓 Student Registration
 
@@ -149,19 +165,22 @@ Make sure the following settings in `app.py` are updated correctly:
 
 ### 🔄 Student Form
 
-![Student Form](./4b7423e4-ba85-4276-aa53-f47cc7507c5d.png)
+![image](https://github.com/user-attachments/assets/f7db50a1-4339-490b-b211-b689e99cf512)
+
 
 ### 📅 Attendance Report
 
-![Attendance Report](./21cacafd-943c-4ad0-8ab6-81c148be37fb.png)
+![image](https://github.com/user-attachments/assets/de28e15a-b5ba-47ef-bf3a-4f38569c9dbe)
+
 
 ### 📝 Profile Page
 
-![Profile Page](./283f3f94-d709-4b9a-baa4-1ade835f6667.png)
+![image](https://github.com/user-attachments/assets/15ab5ae3-58dc-4d4a-a758-75d275c4839d)
+
 
 ---
 
-## 🤝 Contributions
+##Contributions
 
 We welcome contributions from the community! Feel free to fork the repository, make changes, and submit pull requests.
 
@@ -169,14 +188,16 @@ We welcome contributions from the community! Feel free to fork the repository, m
 
 ## Developers
 
-
+Rahul Dhiman
 
 ---
 
-## 📄 License
+##License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ---
-
+# Other Detail
+Go to ever file in this repo of these two files and use readme from there to run  each files properly and make sure that once pip commands are used then no need to write them ever time , only use for the first time only and flask to run these files,and after making changes stop the server and run again to see the changes made.
+---
 Would you like me to include a short video demo section to showcase the flow, like logging in, registering, and generating reports? It could make the README even more engaging. Just let me know if you want me to tweak anything else! 😊
